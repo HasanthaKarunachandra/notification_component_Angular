@@ -1,0 +1,32 @@
+<div class="main-div">
+    <div class="notification-div">
+        <div class="top-div">
+            <div class="top-left"><div class="div-btn btn">All Notifications<span><fa-icon [icon]="faChevronDown"></fa-icon></span></div></div>
+            <div class="top-right"><span class="btn">Mark All as Read</span></div>
+        </div>
+        <div class="middle-div">
+                <li *ngFor="let notification of notifications">
+                    <div class="profile-div">
+                        <img [src]="notification.url" alt="">
+                    </div>
+                    <div class="content-div">
+                        <div class="notification-type">
+                            {{notification.name}} Sent a {{notification.status}}
+                        </div>
+                        <div class="notification-option">
+                            {{currentDate | date :'M/d/yy, h:mm a'}}
+                            <div class="make-as-read btn">Make as Read</div>
+                            <div class="send-msg btn">Send a Message</div>
+                        </div>
+                    </div>
+                    <div class="delete-div">
+                        <div class="div-1"></div>
+                        <div class="div-2 btn">Delete</div>
+                    </div>
+                </li>
+        </div>
+        <div class="bottom-div">
+            <div class="clear-button btn"><span><fa-icon [icon]="faTrashAlt"></fa-icon></span>Clear All</div>
+        </div>
+    </div>
+</div>
