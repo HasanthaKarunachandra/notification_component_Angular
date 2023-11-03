@@ -6,15 +6,22 @@ import { AppComponent } from './app.component';
 import { NotificationsComponent } from './Components/notifications/notifications.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import { ScrollComponent } from './Components/scroll/scroll.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
